@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Gallery - Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #ff8a00, #da1b60);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        .image-container {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        section:hover img {
+            transform: scale(1.05);
+        }
+        
+        .content {
+            padding: 25px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(255, 75, 43, 0.6);
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nature's Wonders Gallery</h1>
+            <p class="subtitle">Explore breathtaking natural landscapes from around the world and learn more about these incredible ecosystems</p>
+        </header>
+        
+        <div class="gallery">
+            <section>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" 
+                         alt="Majestic snow-covered mountain peaks at sunrise">
+                </div>
+                <div class="content">
+                    <h2>Mountain Majesty</h2>
+                    <p>The towering peaks of the world's greatest mountain ranges inspire awe and wonder. These geological formations are home to unique ecosystems and play a vital role in our planet's water cycle.</p>
+                    <a href="https://en.wikipedia.org/wiki/Mountain" class="btn" target="_blank">Explore Mountains</a>
+                </div>
+            </section>
+            
+            <section>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" 
+                         alt="Lush green forest with sunlight filtering through tall trees">
+                </div>
+                <div class="content">
+                    <h2>Enchanted Forests</h2>
+                    <p>Forests are Earth's lungs, absorbing carbon dioxide and producing oxygen. These complex ecosystems support an incredible diversity of plant and animal life that we're only beginning to understand.</p>
+                    <a href="https://en.wikipedia.org/wiki/Forest" class="btn" target="_blank">Discover Forests</a>
+                </div>
+            </section>
+            
+            <section>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&w=600&q=80" 
+                         alt="Crystal clear ocean water with vibrant coral reef visible below">
+                </div>
+                <div class="content">
+                    <h2>Ocean Depths</h2>
+                    <p>Covering over 70% of our planet, oceans are teeming with life and hold mysteries we've yet to uncover. Coral reefs alone support about 25% of all marine species.</p>
+                    <a href="https://en.wikipedia.org/wiki/Ocean" class="btn" target="_blank">Dive Into Oceans</a>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Image Gallery Project | Responsive Design | All images from Unsplash</p>
+        </footer>
+    </div>
+</body>
+</html>
